@@ -1,0 +1,38 @@
+*******API Testing with REST Assured**********
+
+
+***Prerequisites***
+Before running the tests, ensure you have the following installed:
+
+Software	Version	Link
+JDK	8 or higher	Download JDK
+Maven	Latest	Download Maven
+IDE	IntelliJ IDEA/Eclipse	IntelliJ IDEA / Eclipse
+
+
+***Setup**
+Clone the Repository
+
+git clone https://github.com/sunitakolkar/wap-twitch-automation.git
+cd wap-twitch-automation
+
+
+***Dependencies***
+The project uses the following dependencies:
+
+Dependency	Version	Scope
+REST Assured	4.3.3	test
+JUnit	4.13.1	test
+
+***Test Results***
+
+
+| ----Test Case------|------ Description------------------|-----------Expected Result------------------------------|----------Actual Result--------------------------------|--Status-- |       
+|--------------------|------------------------------------|--------------------------------------------------------|-------------------------------------------------------|---------- |
+| testGetPoemByTitle | Validate poem title retrieval      | Status code 200,title contains "Love's Rose"           | Status code 200,title contains "Love's Rose"          |Pass       |
+| testGetPoemByAuthor| Validate poem author retrieval     | Status code 200,author contains "Percy Bysshe Shelley" | Status code 200,author contains "Percy Bysshe Shelley"|Pass       |
+| testGetPoemByLines | Validate poem lines count retrieval| Status code 200,linecount should be 20                 | Status code 200,linecount should be 20                |Pass       |
+
+
+
+Validation is used on Response StatusCode and Response Body to check the api request is successful and response data is what we expected
